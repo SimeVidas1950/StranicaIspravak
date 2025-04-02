@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #2c3e50;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 300px; /* Vraćena originalna dimenzija */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/SimeBak/BlueLagoonNovalja/99512b4b553e32e9e64eb9d579bba2ca7be8fd4b/Logo.svg" alt="Logo Apartmani">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="apartmani.html">Apartmani</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="rezervacija.html">Rezervacija</a></li>
+                <li><a href="lokacija.html">Lokacija</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="highlight">Kontakt</h1>
+        <div class="highlight contact-info">
+            <div class="contact-item">
+                🏠 <p><strong>Adresa:</strong> Varsan, Brneštre 2</p>
+            </div>
+            <div class="contact-item">
+                📧 <p><strong>E-mail:</strong> <a href="mailto:bluelagoon@gmail.com">bluelagoon@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                📞 <p><strong>Telefon:</strong> <a href="tel:+385955882710">+385 95 5882 710</a></p>
+            </div>
+            <div class="contact-item">
+                📸 <p><strong>Instagram:</strong> <a href="https://www.instagram.com/apartman_blue_lagoon">@apartman_blue_lagoon</a></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Blue Lagoon Novalja. Sva prava pridržana.</p>
+    </footer>
+
+</body>
+</html>

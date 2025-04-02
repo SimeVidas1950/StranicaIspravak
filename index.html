@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartmani - Početna</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: black;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 80px;
+            margin-right: 10px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .nav-menu a:hover {
+            color: #f39c12;
+            text-decoration: underline;
+        }
+
+        .parallax-container {
+            position: relative;
+            height: 90vh;
+            background-image: url('Pozadinska_slika.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: 50% 15%;
+        }
+
+        .text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(44, 62, 80, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .promo {
+            background-color: rgba(44, 62, 80, 0.9);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .promo a {
+            color: black; 
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .promo a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+        }
+    </style>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/SimeBak/BlueLagoonNovalja/99512b4b553e32e9e64eb9d579bba2ca7be8fd4b/Logo.svg" alt="Logo Apartmani">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="apartmani.html">Apartmani</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="rezervacija.html">Rezervacija</a></li>
+                <li><a href="lokacija.html">Lokacija</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="parallax-container">
+        <div class="text-box">
+            <h1>Dobrodošli u apartmane Blue Lagoon</h1>
+            <p>Ovdje možeš pronaći savršeno mjesto za odmor.</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="promo">
+            <p>🏖️ <strong>Planiraš savršen odmor?</strong></p>
+            <p>Iznajmi naš vrhunski apartman u Novalji i uživaj u luksuznom smještaju po <strong>najboljim cijenama</strong>!</p>
+            <p>🌞 <strong>Top ponuda ljeta:</strong> Blizina plaža, savršena lokacija, udobnost i povoljni uvjeti - sve što trebaš za nezaboravan boravak.</p>
+            <p><a href="rezervacija.html">Rezerviraj sada</a> i osiguraj svoje mjesto već danas!</p>
+        </div>
+
+        <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <video controls width="15%" height="auto">
+                <source src="video_uređen.mp4" type="video/mp4">
+                Vaš preglednik ne podržava HTML video. Preuzmite video <a href="video_uređen.mp4">ovdje</a>.
+            </video>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blue Lagoon Apartmani. Sva prava pridržana.</p>
+    </footer>
+
+</body>
+</html>

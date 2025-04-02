@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1, p {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #2c3e50;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .gallery-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+            z-index: 1;
+        }
+
+        .gallery-image {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 5px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(44, 62, 80, 0.8);
+            color: white;
+            font-size: 30px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        .arrow:hover {
+            background-color: #f39c12;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/SimeBak/BlueLagoonNovalja/99512b4b553e32e9e64eb9d579bba2ca7be8fd4b/Logo.svg" alt="Logo Apartmani">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="apartmani.html">Apartmani</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="rezervacija.html">Rezervacija</a></li>
+                <li><a href="lokacija.html">Lokacija</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="highlight">Galerija</h1>
+        <p class="highlight">Pogledajte slike naših apartmana:</p>
+        <div class="gallery-container">
+            <button class="arrow left" id="prev" aria-label="Prethodna slika">&larr;</button>
+            <img src="bitmapa_uređena_copy.jpg" alt="Slika apartmana" class="gallery-image" id="current-image">
+            <button class="arrow right" id="next" aria-label="Sljedeća slika">&rarr;</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blue Lagoon Novalja. Sva prava pridržana.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = [
+                "bitmapa_uređena_copy.jpg",
+                "slika1.jpg",
+                "slika2.jpg",
+                "slika3.jpg",
+                "slika4.jpg",
+                "slika5.jpg",
+                "slika6.jpg",
+                "slika7.jpg",
+                "slika8.jpg"
+            ];
+            let currentIndex = 0;
+
+            const currentImage = document.getElementById("current-image");
+            const prevButton = document.getElementById("prev");
+            const nextButton = document.getElementById("next");
+
+            function updateImage() {
+                currentImage.src = images[currentIndex];
+            }
+
+            prevButton.addEventListener("click", function () {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateImage();
+            });
+
+            nextButton.addEventListener("click", function () {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateImage();
+            });
+        });
+    </script>
+
+</body>
+</html>
