@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apartmani</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo img {
+            height: 100px;
+            margin-right: 10px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-menu li {
+            margin: 0 15px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1, p {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .highlight {
+            background-color: #2c3e50;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .apartment-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .apartment-card {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+        }
+
+        .apartment-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .apartment-card .content {
+            padding: 15px;
+        }
+
+        .apartment-card h3 a {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .apartment-card h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+        }
+
+        .apartment-card p {
+            margin: 0 0 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .apartment-card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/SimeBak/BlueLagoonNovalja/99512b4b553e32e9e64eb9d579bba2ca7be8fd4b/Logo.svg" alt="Logo Apartmani">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="apartmani.html">Apartmani</a></li>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="cjenik.html">Cjenik</a></li>
+                <li><a href="rezervacija.html">Rezervacija</a></li>
+                <li><a href="lokacija.html">Lokacija</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="highlight">Apartmani</h1>
+        <p class="highlight">Pregledajte naše apartmane i pronađite onaj koji najbolje odgovara vašim potrebama.</p>
+        <div class="apartment-container">
+            <div class="apartment-card">
+                <img src="slika5.jpg" alt="Apartman s jednom spavaćom sobom">
+                <div class="content">
+                    <h3>
+                        <a href="rezervacija.html">Apartman s jednom spavaćom sobom</a>
+                    </h3>
+                    <p>Uživajte u modernom apartmanu s jednom spavaćom sobom, savršenom za parove.</p>
+                    <p class="price">Cijena: od 50€/noć</p>
+                </div>
+            </div>
+
+            <div class="apartment-card">
+                <img src="slika1.jpg" alt="Apartman s dvije spavaće sobe">
+                <div class="content">
+                    <h3>
+                        <a href="rezervacija.html">Apartman s dvije spavaće sobe</a>
+                    </h3>
+                    <p>Prostrani apartman s dvije spavaće sobe, idealan za obitelj ili grupu prijatelja.</p>
+                    <p class="price">Cijena: od 90€/noć</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Blue Lagoon. Sva prava pridržana.</p>
+    </footer>
+
+</body>
+</html>
